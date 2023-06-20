@@ -40,6 +40,15 @@ app.put("/todos/:id",(req, res, next)=>{
 
     res.status(200).json(todos)
 })
+app.delete("/todos/:id",(req, res, next)=>{
+    const {id} = req.params
+
+    const newTodos = todos.filter((item)=>item.id !== id)
+
+    todos = newTodos
+    res.status(204).json()
+
+})
 
 
 
