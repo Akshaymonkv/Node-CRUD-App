@@ -40,6 +40,7 @@ app.put("/todos/:id",(req, res, next)=>{
 
     res.status(200).json(todos)
 })
+//creating a delete method to remove a single element from the array
 app.delete("/todos/:id",(req, res, next)=>{
     const {id} = req.params
 
